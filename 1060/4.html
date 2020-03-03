@@ -13,8 +13,6 @@
     <meta http-equiv="expires" content="0">
     <title>走势图</title>
     <link href="../css/1090.css" rel="stylesheet">
-    <script type="text/javascript" charset="utf-8" async="" src="../js/jquery-3.3.1.min.js">
-    </script>
     <style>
         .overhideen {
             overflow: hidden !important; 
@@ -39,9 +37,9 @@
                 <div class="chart-wrap">
                     <div class="communal-nav fixation">
                         <dl>
-                            <dd class="h-nav-item"><span>基本走势</span></dd>
-                            <dd class="h-nav-item"><span>大小走势</span></dd>
-                            <dd class="h-nav-item"><span>奇偶走势</span></dd>
+                            <dd class="h-nav-item tabs1"><span>基本走势</span></dd>
+                            <dd class="h-nav-item tabs2"><span>大小走势</span></dd>
+                            <dd class="h-nav-item tabs3"><span>奇偶走势</span></dd>
                             <dd class="h-nav-item router-link-exact-active active"><span>冷热分析</span></dd>
                             <!---->
                         </dl>
@@ -1055,6 +1053,21 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js">
+    </script>
+    <script type="text/javascript">
+            $('.tabs2').click(function() {
+            location.href="2.html"
+        })
+        $('.tabs3').click(function() {
+            location.href="3.html"
+        })
+        $('.tabs1').click(function() {
+            location.href="1.html"
+        })
+
+    </script>
+
 </body>
 
 </html>
