@@ -13,8 +13,15 @@
     <meta http-equiv="expires" content="0">
     <title>走势图</title>
     <link href="../css/1090.css" rel="stylesheet">
-    <script type="text/javascript" charset="utf-8" async="" src="../js/jquery-3.3.1.min.js">
-    </script>
+    <style>
+        .overhideen {
+            overflow: hidden !important; 
+        }
+
+        .has-fix-issue .chart-container {
+            padding-bottom: 0;
+        }
+    </style>    
 </head>
 
 <body>
@@ -63,7 +70,7 @@
                                 <div class="chart-right">
                                     <div class="chart-table">
                                         <div class="fixed-hd">
-                                            <table border="0" cellspacing="0" cellpadding="0">
+                                            <table border="0" cellspacing="0" cellpadding="0" id="navs">
                                                 <colgroup>
                                                     <col width="72">
                                                     <col width="50">
@@ -100,7 +107,7 @@
                             <div class="chart-body">
                                 <div class="chart-left">
                                     <div class="chart-table">
-                                        <table border="0" cellspacing="0" cellpadding="0">
+                                        <table border="0" cellspacing="0" cellpadding="0" id="side-scroll">
                                             <colgroup>
                                                 <col width="60">
                                             </colgroup>
@@ -629,9 +636,9 @@
                                         </table>
                                     </div>
                                 </div>
-                                <div class="chart-right">
+                                <div class="chart-right overhideen">
                                     <div class="chart-table">
-                                        <table border="0" cellspacing="0" cellpadding="0" class="table-red">
+                                        <table border="0" cellspacing="0" cellpadding="0" class="table-red" id="navs2">
                                             <colgroup>
                                                 <col width="72">
                                                 <col width="50">
@@ -1670,7 +1677,7 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                    </div> <i class="line-zs-red"
+                                    <!-- </div> <i class="line-zs-red"
                                         style="top: 14px; left: 113px; width: 30px; transform: rotate(-270deg);"></i><i
                                         class="line-zs-red"
                                         style="top: 44px; left: 113px; width: 65.2993px; transform: rotate(27.3499deg);"></i><i
@@ -2065,7 +2072,7 @@
                                         class="line-zs-purple"
                                         style="top: 2925px; left: 286px; width: 64.8556px; transform: rotate(-207.553deg);"></i><i
                                         class="line-zs-purple"
-                                        style="top: 2955px; left: 228.5px; width: 64.8556px; transform: rotate(27.5528deg);"></i>
+                                        style="top: 2955px; left: 228.5px; width: 64.8556px; transform: rotate(27.5528deg);"></i> -->
                                 </div>
                             </div>
                         </div>
@@ -2074,7 +2081,19 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js">
+    </script>    
+            <script type="text/javascript" src="../js/setting.js">
+            </script>
+            <script type="text/javascript" src="../js/transform.js">
+            </script>    
+    
     <script type="text/javascript">
+                navSwipe("#navs");
+            navSwipe("#navs2");
+            scroll("#side-scroll");
+            scroll("#navs2");
+
         $('.tabs2').click(function() {
             location.href="2.html"
         })
